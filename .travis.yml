@@ -1,0 +1,24 @@
+sudo: false
+language: node_js
+node_js:
+- "8"
+- "10"
+before_script:
+  - npm run build:cjs
+script:
+  - npm run test
+  - npm run test:cjs
+branches:
+  only:
+  - master
+before_deploy:
+  - npm run build:cjs
+deploy:
+  provider: npm
+  skip_cleanup: true
+  email: marty@zalega.me
+  api_key:
+    secure: EyI2RuoG97OJRffk8+sJigLyUkD98kutNbqUNINQdBAeft9LB9I3tYIi+rzQ78TLjJpscz5UTug6xstSEjpn0jmd8xsn328b8VXnuKRNFYVGRGbUKrRjoK59363a08linTfNpfoXFGEU4HJ0X14jzc+MiCdnWANUNAFHh896FsKbraRtBamVhtEjldHQ9HqdJNIPkTNwcU05FT2UDsGMBP2lyhAy6qr48F/tJJJu3WdpssIzhgRJi2W56wvAQSbOdevM2u8fwvZumaTwA+wFG8N5mA1aeZULHIC1YQOsEk+Qfqpl0BC+htfO2LnI36l6GB4bxV5VaB55GwVB9t7JYwAaB/ZTUhDRyCakzhvqWWRnfRwZh2RGH7Qf5fVWhsJIk95aAoU4s7ChfIx3fPEk6hL43pcQ5lHtOeZAWhE7E49kmbujD08EIx9LFrgMZQGzFGSDr4OV7nIlVRUOtJH1APhfJOwxjV8XH0dxVeeXNPSnnCNdUGSb1w2O6hPsuNKII099DH8SlaWlDvfdYOip3uyhHbGnMsdrmFxbvnKQbB4TZ1A4KXXD0XHDD/wXYGV+DdZVdCW+726S9qGD37RKtnEB3JU9SOnv28YchJMihQt6egeq4SM325X/TjJGlShvEUaGPcfL6svXRLuFRQAUXMpWzHpI26RztK7aj/Yx9GA=
+  on:
+    branch: master
+    repo: evilmarty/dhistory

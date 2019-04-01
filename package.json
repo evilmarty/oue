@@ -1,0 +1,38 @@
+{
+  "name": "oue",
+  "version": "1.0.0",
+  "description": "A simple router with the R and T. It's no frills and offers enough functionality to be useful without getting in the way.",
+  "readme": "README.md",
+  "module": "modules/index.js",
+  "main": "lib/index.js",
+  "repository": "https://github.com/evilmarty/ous",
+  "author": "Marty Zalega <marty@zalega.me>",
+  "license": "MIT",
+  "files": [
+    "lib",
+    "modules"
+  ],
+  "dependencies": {
+    "path-to-regexp": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/register": "^7.4.0",
+    "core-js": "^3.0.0",
+    "expect": "^24.5.0",
+    "mocha": "^6.0.2"
+  },
+  "scripts": {
+    "build:cjs": "babel modules --out-dir lib",
+    "test": "mocha --recursive --require @babel/register modules/",
+    "test:cjs": "mocha --recursive lib/"
+  },
+  "keywords": [
+    "router",
+    "routing",
+    "routes",
+    "dispatch"
+  ]
+}
