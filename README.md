@@ -1,4 +1,4 @@
-# rOUtEr
+# rOUtEr ![https://api.travis-ci.org/evilmarty/oue.svg?branch=master](https://travis-ci.org/evilmarty/oue)
 
 A simple router with the R and T. It's no frills and offers enough functionality to be useful without getting in the way.
 
