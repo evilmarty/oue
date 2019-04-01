@@ -1,24 +1,24 @@
 sudo: false
 language: node_js
 node_js:
-- "8"
-- "10"
+- '8'
+- '10'
 before_script:
-  - npm run build:cjs
+- npm run build:cjs
 script:
-  - npm run test
-  - npm run test:cjs
+- npm run test
+- npm run test:cjs
 branches:
   only:
   - master
 before_deploy:
-  - npm run build:cjs
+- npm run build:cjs
 deploy:
   provider: npm
   skip_cleanup: true
   email: marty@zalega.me
   api_key:
-    secure: EyI2RuoG97OJRffk8+sJigLyUkD98kutNbqUNINQdBAeft9LB9I3tYIi+rzQ78TLjJpscz5UTug6xstSEjpn0jmd8xsn328b8VXnuKRNFYVGRGbUKrRjoK59363a08linTfNpfoXFGEU4HJ0X14jzc+MiCdnWANUNAFHh896FsKbraRtBamVhtEjldHQ9HqdJNIPkTNwcU05FT2UDsGMBP2lyhAy6qr48F/tJJJu3WdpssIzhgRJi2W56wvAQSbOdevM2u8fwvZumaTwA+wFG8N5mA1aeZULHIC1YQOsEk+Qfqpl0BC+htfO2LnI36l6GB4bxV5VaB55GwVB9t7JYwAaB/ZTUhDRyCakzhvqWWRnfRwZh2RGH7Qf5fVWhsJIk95aAoU4s7ChfIx3fPEk6hL43pcQ5lHtOeZAWhE7E49kmbujD08EIx9LFrgMZQGzFGSDr4OV7nIlVRUOtJH1APhfJOwxjV8XH0dxVeeXNPSnnCNdUGSb1w2O6hPsuNKII099DH8SlaWlDvfdYOip3uyhHbGnMsdrmFxbvnKQbB4TZ1A4KXXD0XHDD/wXYGV+DdZVdCW+726S9qGD37RKtnEB3JU9SOnv28YchJMihQt6egeq4SM325X/TjJGlShvEUaGPcfL6svXRLuFRQAUXMpWzHpI26RztK7aj/Yx9GA=
+    secure: MtFUBTODHJMlM2cUZjIV2DVeaV1vGAgst3d7f90f57kmgxnEsqhN7QsxGEIBWx9P0FMMo8XgpWgbAjf1yrikogtMwUrP8HQp17FWW8clAIP8L+tCMWNF9ak5I0iQBSMBtstvwplngadwrstqXSn+GfPxSDaxiD8AfTa0evDX/6Y8g8n/aYKYWu5idqfr7+egqdpO++jvw9pB7UyL9vUo2gCOSqBjRTcXyAUGRMzZlatvvz3SfxsFFPksSOwl2ly8iwbdHq17qazMWmEc8wCaIvW95O0dnzHCMJkpr3MM71T5+w6oPTyfkN0hCsaVYM208ZDCMWEH8x3mJbKsX/yQMK1Il0TI+KILJdv5n5+xkwaf0lqlHl6jtwN+qopNs/tyOCQv8G9cwf88JVWxtpJVOuyUcvPrJnyCZs/27Np/a3NZiOA++wCYpqsdBhHzy2viPm+1YZdyWrR43ZPGX20/XMv4X7Kaxdx5ghg0JZV8QMgpju1Qxh4aRUyLX3PhRO9Qy+dPBDw/HaKNa0Vhtw/8cdjXgc4CdcD0oQ9fbX6PhUWEvvBJ0Munk2VOlgFdh+FfKtTVqL18gqLGn2N3lpt7VBgW838iEHarGp8iSaA49RDf+ASQTws3Gu3CCJex43Hjfn/ExfUze/eaSK9B1SMtn3Nq09bXDMxbO1cMcz6+xa4=
   on:
     branch: master
-    repo: evilmarty/dhistory
+    repo: evilmarty/oue
