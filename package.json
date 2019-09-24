@@ -22,7 +22,7 @@
     "@babel/register": "^7.4.0",
     "core-js": "^3.0.0",
     "expect": "^24.5.0",
-    "mocha": "^6.0.2"
+    "mocha": "^6.2.0"
   },
   "scripts": {
     "build:cjs": "babel modules --out-dir lib",
